@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    margin: 0;
+    position: relative;
+    height: 100%;
+}
+
+/* Image */
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+input {
+    margin: 2px;
+}
+/* Article, Main Page Body*/
+
+article {
+    padding: 15px;
+    width: 60%;
+    background-color:#262626;
+    height: 124vh;
+    float: left;
+    color: white;
+    overflow-y: auto;
+}
+
+/* Additional Body Div */
+
+.description {
+    padding: 15px;
+    width: 100%;
+    background-color: #333;
+    height: 50vh;
+    float: right;
+    text-align: center;
+    color: white;
+}
+
+/* Aside */
+
+aside {
+    width: 20%;
+    height: 124vh; 
+    background-color: #262626;
+    float: left;
+    text-align: center;
+    padding: 15px;
+    overflow: auto;
+    color: white;
+    border-right: 5px solid #333;
+}
+
+aside a {
+    flex: 0 0 100%;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 1%;
+    padding: 25px;
+    float: right;
+    text-decoration: none;
+    color: black;
+    background-color: #8c8c8c;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+aside a:hover {
+    color: white;
+    background-color: #6666ff;
+}
+
+/* Secondary Aside for the right side of the page */
+
+.aside-right {
+    width: 20%;
+    padding: 15px;
+    height: 104vh; 
+    background-color: #262626;
+    float:right;
+    text-align: center;
+    color: white;
+    border-left: 5px solid #333; 
+}
+
+.aside-right a {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Menu Grid */
+
+.menu_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Central Menu Items*/
+
+.menu_item {
+    border-radius: 50px;
+    padding-top: 45%;
+    padding-bottom: 45%;
+    position: relative;
+    background-color: #8c8c8c;
+    text-align: center;
+}
+
+.menu_item_link {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    flex: 0 0 32%;
+    border-radius: 50px;
+    margin-bottom: 1.5%;
+}
+
+.menu_item_link:hover {
+    background-color: #6666ff;
+    color: white;
+}
+
+.menu_item:hover {
+    background-color: #6666ff;
+}
+
+/* style for show class, used in filter functions */
+
+.show {
+    display: block;
+}
+
+/* Media, Screen-size related items */
+
+@media screen and (max-width: 1000px){
+    .menu_grid {
+        flex-direction: column;
+        flex-flow: column;
+    }
+
+    .menu_item{
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    .menu_item_link {
+        font-size: 45px;
+    }
+
+    article {
+        height: 252vh;
+    }
+
+    aside {
+        height: 302vh;
+    }
+
+    .aside-right {
+        height: 282vh;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+/*Swiper CSS, courtesy of https://github.com/nolimits4web/Swiper/blob/master/demos/030-pagination.html*/
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #262626;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}

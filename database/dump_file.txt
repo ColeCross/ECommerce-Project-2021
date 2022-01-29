@@ -1,0 +1,83 @@
+-- MySQL dump 10.17  Distrib 10.3.18-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: chc0009
+-- ------------------------------------------------------
+-- Server version	10.3.18-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `projectAccounts`
+--
+
+DROP TABLE IF EXISTS `projectAccounts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `projectAccounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `role` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `projectAccounts`
+--
+
+LOCK TABLES `projectAccounts` WRITE;
+/*!40000 ALTER TABLE `projectAccounts` DISABLE KEYS */;
+INSERT INTO `projectAccounts` VALUES (3,'Admin','Admin@OSPS.com','$2y$10$ApMT70.tRtAad0yGZCxmoOoTopcOC8WbSfNgFgxTS3fHi4MPO9UKu','admin'),(4,'John Doe','JohnDoe@gmail.com','$2y$10$c7SYmNPROWfajjS5Ohh0teRexupDHpXCQhBdXfm6Tx2NNGARe9e0u','user');
+/*!40000 ALTER TABLE `projectAccounts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `projectProducts`
+--
+
+DROP TABLE IF EXISTS `projectProducts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `projectProducts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `type` varchar(200) NOT NULL,
+  `price` int(100) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `sale` tinyint(1) NOT NULL,
+  `description` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `projectProducts`
+--
+
+LOCK TABLES `projectProducts` WRITE;
+/*!40000 ALTER TABLE `projectProducts` DISABLE KEYS */;
+INSERT INTO `projectProducts` VALUES (1,'Intel Core i7-10700K','Processor',330,95,1,'8-Core 3.8 GHz LGA 1200 125W Processor'),(2,'Intel Core i9-9900K','Processor',375,89,0,'8-Core 16-Thread 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W Processor'),(3,'GIGABYTE Geforce RTX 2060','Video Card',770,80,1,'OC 6G Graphics Card, 2x WINDFORCE Fans, 6GB 192-Bit GDDR6'),(4,'EVGA 700 BQ','Power Supply',70,75,1,'80+ Bronze 700W, Semi Modular, FDB Fan, 5 Year Warranty'),(5,'MSI MAG B550 TOMAHAWK','Motherboard',190,70,0,'Am4 AMD B550 SATA 6GB/s ATX'),(6,'WD Red Plus 8TB NAS HDD','Storage',200,87,1,'7200 RPM Class SATA 6GB/s, CMR, 256Mb Cache, 3.5 inch'),(7,'Cooler Master Hyper 212','Cooling',40,95,0,'Black Edition. CPU Air Cooler, Silencio FP120 Fan, 4 CDC 2.0 Heatpipes.\r\n\r\nBrushed Nickel Fins for AMD Ryzen/Intel LGA1200/1151.'),(8,'Rosewill PHOTON Series 850W','Power Supply',160,78,0,'Full modular Gaming Power Supply, 80 PLUS Gold Certified, Single +12V Rail, SLI and Crossfire Ready'),(9,'G.SKILL Ripjaws V Series 16GB','Memory',95,93,1,'2x 8GB 288-Pin DDR4 SDRAM DDR4 3600 (PC4 28800)'),(10,'MSI GeForce GTX 1650','Video Card',400,74,0,'DirectX 12 GTX 1650 VENTUS XS 4G OC 4G 128-Bit GDDR5 PCI Express 3.0 x16 HDCP Ready'),(11,'Corsair Crystal Series 570X','Case',170,90,1,'RGB Mirror Black Tempered Glass, Premium ATX Mid Tower Case'),(12,'TOSHIBA N300 8TB','Storage',200,65,0,'7200 RPM 256MB Cache SATA 6.0Gb/s 3.5\" High-Reliability'),(13,'ASUS ROG Maximus XIII Hero','Motherboard',500,81,0,'WiFi 6E Z590 LGA 1200 (Intel 11th/10th Gen) PCIe 4.0, 14+2 Power Stages, DDR4 5333+, Dual 2.5Gb LAN, Thunderbolt 4 Onboard, Bluetooth v5.2, Quad M.2/NVMe SSD, Aura RGB Lighting'),(14,'CORSAIR Vengeance RGB Pro 16GB','Memory',110,99,1,'(2 x 8GB) 288-Pin DDR4 DRAM DDR4 3200 (PC4 25600)'),(15,'Corsair 4000D CC-9011198-WW','Case',95,100,0,'Black Steel / Plastic / Tempered Glass ATX Mid Tower Computer Case'),(16,'Noctua NH-U9DXi4','Cooling',60,98,1,'90mm SSO2 CPU Cooler'),(17,'AMD Ryzen Threadripper 3960X','Processor',1300,100,1,'24-Core 3.8 GHz Socket sTRX4 280W 100-100000010WOF Desktop Processor');
+/*!40000 ALTER TABLE `projectProducts` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-04-29 20:55:43
